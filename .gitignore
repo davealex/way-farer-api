@@ -1,5 +1,6 @@
 /.idea
 /node_modules
+/backend/dist
 /.env
 *.log
 npm-debug.log*
