@@ -21,7 +21,9 @@ app.use('/api/v1', routerV1);
 
 // respond to GET '/'
 app.use((req, res, next) => {
-  if (req.originalUrl === '/') getIndex(req, res);
+  if (req.originalUrl === '/') {
+      return getIndex(req, res);
+  }
   next();
 });
 
