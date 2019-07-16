@@ -1,10 +1,11 @@
 import mocha from 'mocha';
-const { describe } = mocha;
 import chai from 'chai';
-const { expect } = chai;
 import chaiHttp from 'chai-http';
 import logger from '../../../config/winston';
 import app from '../../../server';
+
+const { describe } = mocha;
+const { expect } = chai;
 
 chai.use(chaiHttp);
 
