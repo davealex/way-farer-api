@@ -5,6 +5,7 @@ import routerV1 from './routes/api/v1/api';
 import config from './config/app';
 import specs from './config/swagger';
 import getIndex from './controllers/indexController';
+
 const { PORT } = config;
 
 const app = express();
@@ -22,9 +23,9 @@ app.use('/api/v1', routerV1);
 // respond to GET '/'
 app.use((req, res, next) => {
   if (req.originalUrl === '/') {
-      return getIndex(req, res);
+    return getIndex(req, res);
   }
-  next();
+  return next();
 });
 
 app.use((req, res) => {
